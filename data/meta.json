@@ -1,15 +1,15 @@
 {
-	"title": "Wanderwhim",
+	"title": "Narro",
 	"description": "This is the article description.",
-	"site": "http://wanderwhim.com",
-	"siteName": "Wanderwhim",
-	"url": "http://wanderwhim.com/year/month/name/",
+	"site": "https://narro.design",
+	"siteName": "Narro",
+	"url": "https://narro.design/year/month/name/",
 	"keywords": "tk",
 	"imgFacebook": "",
 	"imgTwitter": "",
 	"author": {
 		"name": "David Newcomb",
-		"url": "http://wanderwhim.com",
+		"url": "https://narro.design",
 		"twitterHandle": ""
 	},
 	"analytics": "",
