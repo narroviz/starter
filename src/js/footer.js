@@ -1,8 +1,7 @@
 const fallbackData = [
-      {}, 
-      {"image":"nba","url":"html/nba-season-history","hed":"NBA Season History"},
-      {"image":"nba","url":"html/wnba-season-history","hed":"WNBA Season History"},
-      {},
+      {"image":"around_the_world","url":"html/around-the-world","hed":"Around the World"},
+      {"image":"nba_season_history","url":"html/nba-season-history","hed":"NBA Season History"},
+      {"image":"wnba_season_history","url":"html/wnba-season-history","hed":"WNBA Season History"},
     ]
 
 let storyData = null;
@@ -25,7 +24,7 @@ function loadJS(src, cb) {
 function loadStories(cb) {
   var request = new XMLHttpRequest();
   var v = Date.now();
-  var url = "https://narro.design/assets/data/stories.json?v=".concat(v);
+  var url = "https://narro.design/assets/data/stories.json";
   request.open("GET", url, true);
 
   request.onload = function () {
@@ -50,35 +49,18 @@ function createLink(d) {
   }
 }
 
-function recircHTML() {
-  const storyData = [
-  {
-    "image": "around_the_world",
-    "url": "html/around-the-world",
-    "hed": "Around The World"
-  }, 
-  {
-    "image": "wnba_season_paths",
-    "url": "html/wnba-season-history",
-    "hed": "WNBA Season History"
-  }, {
-    "image": "nba_season_paths",
-    "url": "html/nba-season-history",
-    "hed": "NBA Season History"
-  },
-  ];
-
+function recircHTML(storyData) {
   var url = window.location.href;
   var html = storyData.filter(function (d) {
     return !url.includes(d.url);
-  }).slice(0, 4).map(createLink).join("");
+  }).slice(0, 3).map(createLink).join("");
   d3.select(".narro-footer .footer-recirc__articles").html(html);
 }
 
 function init() {
   loadStories(data => {
     storyData = data;
-    recircHTML();
+    recircHTML(storyData);
   });
 }
 

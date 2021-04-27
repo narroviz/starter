@@ -55,7 +55,7 @@ function compileTemplate(data) {
   const template = handlebars.compile(content);
   const result = template(data);
 
-  const output = `${DIR_TMP}/index.html`;
+  const output = `${DIR_OUT}/index.html`;
   fs.writeFileSync(output, result);
 
   return Promise.resolve(output);
@@ -85,7 +85,7 @@ function inlineSVG(input) {
       ignore: ['link', 'script'],
     })
       .then(html => {
-        const output = `${DIR_TMP}/index-svg.html`;
+        const output = `${DIR_OUT}/index.html`;
         fs.writeFileSync(output, html);
         resolve(output);
       })
@@ -101,7 +101,7 @@ function init() {
     .then(loadData)
     .then(compileTemplate)
     .then(inlineSVG)
-    .then(inlineScriptStyle)
+    // .then(inlineScriptStyle)
     .then(() => console.timeEnd('compiling html'))
     .catch(err => {
       console.log(err);

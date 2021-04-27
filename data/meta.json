@@ -1,17 +1,17 @@
 {
 	"title": "Narro",
 	"description": "This is the article description.",
+	"dashedReference": "narro-starter",
+	"underscoreReference": "narro_starter",
+	"publishedDate": "2020/05/08",
+	"keywords": "narro",
+
 	"site": "https://narro.design",
 	"siteName": "Narro",
-	"url": "https://narro.design/year/month/name/",
-	"keywords": "tk",
-	"imgFacebook": "",
-	"imgTwitter": "",
+	"urlPrefix": "https://narro.design/html/",
 	"author": {
 		"name": "David Newcomb",
 		"url": "https://narro.design",
-		"twitterHandle": ""
-	},
-	"analytics": "",
-	"lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis neque sit amet sollicitudin vehicula. Maecenas fringilla mi non lacus mattis elementum. Curabitur dignissim faucibus justo."
+		"twitterHandle": "narroviz"
+	}
 }
